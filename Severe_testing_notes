@@ -1,0 +1,282 @@
+Personal notes on Deborah Mayo's 2018 book 'Statistical Inference as Severe Testing: How to Get Beyond the Statistics Wars'
+
+excursion 1 How to tell what’s true about statistical inference
+
+Tour 1 Beyond Probabilism and performance
+
+Problems in stats -> identification of problems -> ‘task forces’ and methodological upheaval.
+
+To appraise the upheaval we need a grasp of the problems.
+
+Getting Philosophical
+
+People are either too quick to assume canonical philosophical positions, or approach philosophy with trepidation.
+
+What’s true about memes such as “All models are false”, “Most published research findings are false” etc.? Why are they memes?
+
+Fisher said that an isolated statistically significant result doesn’t count, so why are memes like the above so popular?
+
+Telling what’s true about the methods are difficult because of the massive amount of discussion, problem solving, task forces etc. not just because they aren’t good.
+
+The problem isn’t just misuse of p-values, it’s about the philosophical conception of statistics out of which it grows.
+
+“Methods characterized through the lens of over simple epistemological orthodoxies are methods misapplied and mischaracterized. This may lead on to lie, however unwittingly, about the nature and goals of statistical inference, when what we want is to tell what’s true about them”
+
+1.1 Severity Requirement: Bad Evidence, No Test (BENT)
+
+Severity Requirement (weak): One does not have evidence for a claim if nothing has been done to rule out ways the claim can be false. If data x agree with a claim C but the method used is practically quaranteed to find such agreement and had little or no capability of finding flaws with C even if they exist, then we have Bad Evidence, No Test (BENT)
+
+“Practically guaranteed”: even if the method had some slim chance of producing a disagreement if C is false, we still regard the evidence as lousy.
+
+Do we always want to find things out?
+
+BENT is at foundation of our practice, but we also need the goal of finding things out
+
+People too often don’t want to find out the truth, or rather the whole truth.
+
+Need to invent ways of uncovering biases and errors as quick and as painless as possible.
+
+Data is more abundant leading to introspection in statistics. Lots of results are turned out by people untrained in statistics. 
+
+Since statistical thinking is inductive (goes beyond claims about data) we risk error. Clearly need to take precautions pre data and scrutinize post data
+
+A Philosophical excursion
+
+“Statistical methods should not be seen as tools for what philosophers call “rational reconstruction” of a piece of reasoning. Rather they are forward looking tools to find something out faster and more efficiently and to discriminate how good or poor a job others have done.”
+
+Methodology and Meta-methodology
+
+“A severity scrutiny is going to be a key method of our meta methodology”
+
+The probabilities with which a statistical method supports untrue claims are its error probabilities.
+
+Like alpha + beta
+
+No statistical tribe has endorsed the severity requirement however a future tribe might use a method’s error probabilities to assess severity.
+
+“Even predesignating hypotheses … doesn’t preclude bias: that view is a holdover from crude empiricism that assumes data are unproblematically “given,” rather than selected and interpreted. Conversely, using the same data to arrive at and test a claim can, in some cases, be accomplished with stringency”
+
+One must not only report successes, but also “bend over backwards” in order to find ways in which one could be wrong.
+
+Chutzpah, No Proselytizing
+
+We have to analyse both the methods and the knee jerk reactions to them, not only from opposing tribes, but from those who sit out and discount all as hopeless.
+
+Nice quote: “You might say, since rival statistical methods turn on issues of philosophy and on rival conceptions of scientific learning, that it’s impossible to say anything “true” about them, You just did”
+
+1.2 Probabilism, Performance, and Probativeness
+
+Most discussion about statistical foundations is about interpretation of probability, not how it is used in inference. Assumptions about how probability is used are usually implicit, but if we turn our attention to them we can see 2 main philosophies
+1. Performance (in the long run)
+    1. This sees the key function of a method as controlling the relative frequencies of erroneous inferences in the long run. 
+2. Probabilism
+    1. probability as degrees of belief, credence, support, plausibility to a hypothesis. Can be comparative i.e x => H_0 is more believable than H_1, or absolute i,e, x => we believe H_0 more.
+
+Neither philosophy capture the BENT requirement
+
+Good performance fails to get at why methods work when they do. Why should a low frequency of error matter to the appraisal of inference at hand?
+
+We seek to quantify probativeness.
+
+Severity (Strong): Argument of coincidence
+
+Severity (strong): We have evidence for a claim C just to the extent it survives a stringent scrutiny. If C passes a test that was highly capable of finding flaws with C, and yet none or few are found, then the passing result x is evidence for C
+
+Lets say you take 3 weighing scales around with you and an object of known, constant weight. You take a reading of yourself and the known weight, then a month later you take another reading of yourself and the known weight.
+
+If the scales show an increase of 1 kg when they weigh you, but no change when weighing the object then you can falsify the claim that you lost weight.
+
+This procedure invokes 2 ideas:
+
+1. Lift off: “An overall inference can be more reliable and precise than its premises individually”
+    1. Each scale can be biased and imprecise. However because all show I’ve gained weight but the object hasn’t, means we can make the above inference because if one scale were off balance it would be discovered by another and would show up when weighing the object. They are either systematically misleading or I haven’t lost weight. This is an argument from coincidence
+2. Drag-down: “An overall inference is only as reliable/precise as is its weakest premise”
+
+To justify the weight conclusion you wouldn’’t say “If i repeated such a procedure in the long run i would rarely report weight gains in error, but i can’t tell anything from these current readings”
+
+Instead we would appeal to severity: the procedure has “enormous capacity to reveal if one of the scales were wrong so we can infer that I gained weight”
+
+“Just because an account is touted as having a long run rationale it does not mean it lacks a short run rationale”
+
+“Nor is it merely the improbability of all the results [had I lost weight]; it is rather like denying an evil demon has read my mind just in the cases where i do not know the weight of an object and deliberately deceived me”
+
+Here we have an example of an argument from coincidence to absence of error:
+
+“Arguing from Error: There is evidence an error is absent to the extent that a procedure with a very high capability of signaling the error, if and only if is is present, nevertheless detects no error”
+
+Methods that enable the above argument Mayo calls “strong error probes”
+
+“Our ability to develop strong arguments from coincidence, I will argue, is the basis for solving the “problem of induction””
+
+Glaring Demonstrations of Deception
+
+Fisher and Muriel Bristol Roach (the tea woman): Fisher encounters a woman who claims to be able to tell whether tea is made milk first; not perfectly, just that she has a genuine discerning ability.
+
+Say she gets 9 out of 16 right. Should we be impressed? So long as lacking the ability to discern can be modelled well (e.g. by a coin toss (bernoulli distn.)) we can learn from the trials. If the probability that she got what she got, or even higher, is large, then the results are unremarkable.
+
+As it happens P(X >= 9 | X ~ Binomial(16, 0.5)) = 0.4. This is the P-value, or significance level.
+
+So long as we can model ‘lacking the ability’ or ‘nothing happening’ sufficiently well we can perform simple statistical models as the one above.
+
+But we shouldn’t confuse Hypotheses about toy/statistical models with ‘substantive scientific claims’ since models like the above don’t account for how the data are generate or selected for testing.
+
+Therefore, if in a model like the above it’s claimed that “it is very hard to get these results by chance” this is because in simple model world you haven’t taken data collection and selection into account
+
+“Your computed p value is small, but the actual p value is high”
+
+“Incidentally [Muriel] Bristol-Roach got all the cases correct, and thereby taught her hussband a lesson about putting her claims to the test”
+
+Peirce
+
+‘Accomplished reasoner’ Dr Playfair seeks and discovers a formula for the specific gravities of three forms of carbon after scouring the data for regularities. 
+
+The formula is wrong for half the cases it is applied to after it is initially formulated. 
+
+Peirce wants to know whether we should be impressed. He comes up with a random way to produce formulae. His formulae have about the same successes as Playfair’s.
+
+Peirce has shown Playfair’s evidence as BENT.
+
+“Playfair’s formula may be true, or probably true, but Peirce’s little demonstration is enough to show his method did a lousy job of testing it.
+
+Texas Marksman
+
+Texan fires randomly upon the side of a barn, then paints a bullseye in the places where bullet holes are clustered.
+
+The Texan’s marksmanship is not tested, even if you were to compute the probability of that many bullseyes occuring due to chance.
+
+“We appeal to the same statistical reasoning to show the problematics cases as to show genuine arguments from coincidence”
+
+Spurious P-values and Auditing
+
+Need a way to submit a P-value to an audit, to see whether any egregious methods are used to generate it.
+
+“Statistical facts about P-values themselves demonstrate how data finagling can yield spurious significance” i.e. you can analyse p values using statistics (maybe even using p values). Fiducial?
+
+Good idea from Ben Goldacre in Bad Pharma (2012): the gambits give researchers an abundance of chances to find something when the tools assume you only have one chance.
+
+Association is not causation: HRT
+
+Replicability is good, but is blind to systematic bias.
+
+HRT: It was the consensus that HRT is good, but it was shown to cause cancer and heart problems. The consensus was reached because of a selection bias: healthier, less obese, better educated were more likely to take HRT.
+
+Souvenir A: A Postcard to Send
+
+All fraudbusting nowadays is based on error statistical reasoning; none applies the BENT rule.
+
+Simple statistical tests shouldn’t be thrown out just because they are abused.
+
+Background considerations should feature more in frequentist expositions. we should ideally ask of statistical reforms, that they implement the severity requirements:
+
+Severity Requirement (weak): If data x agree with a claim C but the method was practically incapable of finding flaws with C even if they exist then x is poor evidence for C
+
+severity Requirement (strong): If C passes a test that was highly capable of finding flaws or discrepancies from C, and yet none or few are found, then the passing result, x, is an indication of, or evidence for, C.
+
+The current state of play in statistical foundations: the view from a hot air balloon
+
+The current state of statistics, along with more powerful computation, paints a picture of a happy multiplicity: of methods, of tribes etc.
+
+This is not the case on closer inspection
+
+Statistics Debates: Bayesian vs Frequentist
+
+When statistical inference is encompassed by Bayes rule it is thought to be a statistical philosophy. Just using Bayes rule doesn’t place you in either camp.
+
+Wasserman (2012b):
+
+The Goal of Frequentist Inference: Constrict procedure with frequentist guarantees [i.e., low error rates]
+
+The Goal of Bayesian Inference: Quantify and manipulate your degrees of beliefs. In other words, Bayesian inference is the Analysis of Beliefs.
+
+Many Bayesians and Frequentists have calmed down and are seeking unification.
+
+Subjective Bayesians argue against objective Bayesians for practicing in bad faith. Some moderates argue that they no longer use bayesian updating, and only pay homage to the underlying philosophy.
+
+Objective Bayesians use ‘default’ priors which have as little impact on the posterior as possible. Advocates of these are eager to show that the default priors perform well in the long run, and that they can be married with results of frequentist inference.
+
+Subjective bayesians don’t like this because the priors don’t actually code prior beliefs, they’re just viewed as base cases to generate posteriors.
+
+Some bayesians question whether widespread use of bayesian methods actually provide support/justification for (subjective) bayesian philosophical foundations.
+
+Marriages of Convenience?
+
+Statisticians have incentive to marry the two camps: some may not like the rift in foundations, others note that most scientists are practicing frequentists. Frequentists are backed into a corner when they are expected to derive epistemic statements from statements about error probabilities.
+
+“If it’s assumed an evidential assessment of H should take the form of a posterior probability of H - a form of probabilism - then P-values and confidence levels are applicable only through misinterpretation and mistranslation.”
+
+Eclecticism and Ecumenism
+
+Eclecticists have a grab bag of statistical tools taken from a range of philosophies
+
+Maybe throwing different methods at a problem and waiting for one to stick works, but you have to interpret competing answers. Using a method as a crutch for another is valuable.
+
+Decoupling. Methods could be decoupled from the philosophies in which they’re couched. Perhaps this is done by adopting severity as a meta-methodology, collapsing together interpretations and practices of the two philosophies.
+
+Why Our Journey?
+
+Just taking the union of methods of opposing philosophies (like eclecticism) won’t undo the problems plaguing either.
+
+How can we develop better tools when we don’t even know why our current tools are failing?
+
+Tour II Error Probing Tools versus Logics of Evidence
+
+The Law of Likelihood and Error Statistics
+
+Quest for the Holy Grail: Using probability to arrive at a ‘logic of evidential support’.
+
+Law of Likelihood can fill this function:
+
+Law of Likelihood (LL): Data x are better evidence for hypothesis H_1 than for H_0 if x is more probable under H_1 than under H_0: P(x ; H_1) > P(x ; H_0), i.e. their likelihood ratio is greater than 1.
+
+“Note, when X is continuous, the probability is assigned over a small interval around X”
+
+Does the LL Obey the Minimal Requirement for Severity?
+
+Likelihoods are very useful but shouldn’t be confused with probabilities (i.e. if you hold data fixed and integrate of hypotheses then you might not get 1).
+
+Imagine a trading company who chose their portfolio by choosing random portfolios, then selecting the most successful one after the fact. Now observe the data x that all of their stock appreciated in value and make the hypothesis that they always succeed in picking winners
+
+The Likelihood of H | x is high because H entails x but we wouldn’t say H is probable if we knew the selection method.
+
+Generally if we get data x and we (potentially reasonably) hypothesise H we can always find an H_0 tailored to x s.t. its likelihood is higher than H.
+
+If you don’t implement a severe testing criterion you’re always free to find such a H_0 post hoc.
+
+To do this you use the law of likelihood, i.e. you go ‘outside the data’, so we need that the severity requirement is one step removed; a meta-methodology. “We’re actually looking at the probability distribution of the rule, over outcomes in the sample space. This distribution is called the sampling distribution”
+
+Hacking: “There is no such thing as a Logic of Statistical Inference” (Page 32)
+
+Hacking tried to prove, and then refute that there be a logical relationship between any data and hypothesis.
+
+He introduces the tank problem: Say you capture enemy tanks at random and look at their serial numbers. We want to figure out how many have been produced. We know that the first tank has serial number 0001. We capture a tank with serial number 2176. By the law of likelihood the hypothesis that 2176 tanks have been produced is far is higher than the likelihood of any other hypothesis (i.e. of any other larger number of tanks).
+
+He follows with: “compare the relative likelihood of the two hypotheses, 2176 and 3000. Now pass to a situation where we are measuring, say, widths of a grating in which error has a normal distribution with known variance; we can devise data and a pair of hypotheses about the mean which will have the same log-likelihood ratio. I have no inclination to say that the relative support in the tank case is ‘exactly the same as’ that in the normal distribution case, even though the likelihood ratios are the same.” Hacking (1972 pp. 136-7)
+
+Royall’s Road to Statistical Evidence (Page 33)
+
+Richard Royall distinguishes 3 questions, and three ways of answering:
+
+Q1) What do I believe, now that I have this observation?
+A1) Use Bayesian Posteriors
+
+Q2) What should I do, now that I have this observation?
+A2) Use Frequentist Performance
+
+Q3) How should I interpret this observation as evidence regarding [H_0] vs. [H_1]?
+A3) Use the Law of Likelihood
+
+Mayo makes a small medical example that, still, the law of likelihood permits one to conceive of a maximally likely hypothesis for each set of data, when the hypotheses in question are point hypotheses (i.e. theta = 0.2)
+
+Now let’s say we our observations are ~Bernoulli(theta) and compare H_0: theta <= 0.2 and H_1: theta > 0.2. We get some data and find that P(d(X) >= d(x); H_0) = 0.003 where d() is the test statistic. 
+
+Mayo would argue along the following lines: if H_0 described reality accurately then you wouldn’t be able to regularly produce d(x) as large as you had done. So if you did manage to produce such a large value, you could infer that x indicates a genuine effect (as opposed to being evidence for H_0). Royall doesn’t like this.
+
+Why Does the LL Reject Composite Hypotheses? (Page 35)
+
+Royall says his account can’t handle composite hypotheses (i.e. NOT point hypotheses), even the above. The problem is, they say, that whenever you have a hypothesis it should be tested against a point alternative relative to fixed data.
+
+Why is this? Given that the composite alternative hypothesis ranges over multiple values, it may be the case that you accept values within the range that are even less likely given the data, if you accept the hypothesis
+
+For Royall, accepting theta > k over theta <= k means every theta above k is better than every theta below or equal to it.
+
+Royal also puts that inferential claims need making over fixed data
